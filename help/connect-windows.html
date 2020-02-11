@@ -1,1 +1,394 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
+    <title>Connect to GovWifi with a Windows device | GovWifi</title>
+
+    <link href="https://docs.wifi.service.gov.uk/stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="https://docs.wifi.service.gov.uk/">
+
+      <meta property="description" content="Technical documentation for public sector network administrators covering how to set up and manage GovWifi in your organisation." />
+      <meta property="og:description" content="Technical documentation for public sector network administrators covering how to set up and manage GovWifi in your organisation." />
+      <meta property="og:image" content="https://docs.wifi.service.gov.uk/images/govuk-large.png" />
+      <meta property="og:site_name" content="GovWifi" />
+      <meta property="og:title" content="Offer GovWifi in your public sector organisation" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="https://docs.wifi.service.gov.uk/" />
+      <meta property="twitter:card" content="summary" />
+      <meta property="twitter:image" content="https://docs.wifi.service.gov.uk/images/govuk-large.png" />
+      <meta property="twitter:title" content="Connect to GovWifi | GovWifi" />
+      <meta property="twitter:url" content="https://docs.wifi.service.gov.uk/" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link">Skip to main content</a>
+
+        <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="https://wifi.service.gov.uk" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <svg
+            role="presentation"
+            focusable="false"
+            class="govuk-header__logotype-crown"
+            xmlns="http://www.w3.org/2000/svg"
+            viewbox="0 0 132 97"
+            height="30"
+            width="36"
+          >
+            <path
+              fill="currentColor" fill-rule="evenodd"
+              d="M25 30.2c3.5 1.5 7.7-.2 9.1-3.7 1.5-3.6-.2-7.8-3.9-9.2-3.6-1.4-7.6.3-9.1 3.9-1.4 3.5.3 7.5 3.9 9zM9 39.5c3.6 1.5 7.8-.2 9.2-3.7 1.5-3.6-.2-7.8-3.9-9.1-3.6-1.5-7.6.2-9.1 3.8-1.4 3.5.3 7.5 3.8 9zM4.4 57.2c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.5-1.5-7.6.3-9.1 3.8-1.4 3.5.3 7.6 3.9 9.1zm38.3-21.4c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.6-1.5-7.6.3-9.1 3.8-1.3 3.6.4 7.7 3.9 9.1zm64.4-5.6c-3.6 1.5-7.8-.2-9.1-3.7-1.5-3.6.2-7.8 3.8-9.2 3.6-1.4 7.7.3 9.2 3.9 1.3 3.5-.4 7.5-3.9 9zm15.9 9.3c-3.6 1.5-7.7-.2-9.1-3.7-1.5-3.6.2-7.8 3.7-9.1 3.6-1.5 7.7.2 9.2 3.8 1.5 3.5-.3 7.5-3.8 9zm4.7 17.7c-3.6 1.5-7.8-.2-9.2-3.8-1.5-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.3 3.5-.4 7.6-3.9 9.1zM89.3 35.8c-3.6 1.5-7.8-.2-9.2-3.8-1.4-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.4 3.6-.3 7.7-3.9 9.1zM69.7 17.7l8.9 4.7V9.3l-8.9 2.8c-.2-.3-.5-.6-.9-.9L72.4 0H59.6l3.5 11.2c-.3.3-.6.5-.9.9l-8.8-2.8v13.1l8.8-4.7c.3.3.6.7.9.9l-5 15.4v.1c-.2.8-.4 1.6-.4 2.4 0 4.1 3.1 7.5 7 8.1h.2c.3 0 .7.1 1 .1.4 0 .7 0 1-.1h.2c4-.6 7.1-4.1 7.1-8.1 0-.8-.1-1.7-.4-2.4V34l-5.1-15.4c.4-.2.7-.6 1-.9zM66 92.8c16.9 0 32.8 1.1 47.1 3.2 4-16.9 8.9-26.7 14-33.5l-9.6-3.4c1 4.9 1.1 7.2 0 10.2-1.5-1.4-3-4.3-4.2-8.7L108.6 76c2.8-2 5-3.2 7.5-3.3-4.4 9.4-10 11.9-13.6 11.2-4.3-.8-6.3-4.6-5.6-7.9 1-4.7 5.7-5.9 8-.5 4.3-8.7-3-11.4-7.6-8.8 7.1-7.2 7.9-13.5 2.1-21.1-8 6.1-8.1 12.3-4.5 20.8-4.7-5.4-12.1-2.5-9.5 6.2 3.4-5.2 7.9-2 7.2 3.1-.6 4.3-6.4 7.8-13.5 7.2-10.3-.9-10.9-8-11.2-13.8 2.5-.5 7.1 1.8 11 7.3L80.2 60c-4.1 4.4-8 5.3-12.3 5.4 1.4-4.4 8-11.6 8-11.6H55.5s6.4 7.2 7.9 11.6c-4.2-.1-8-1-12.3-5.4l1.4 16.4c3.9-5.5 8.5-7.7 10.9-7.3-.3 5.8-.9 12.8-11.1 13.8-7.2.6-12.9-2.9-13.5-7.2-.7-5 3.8-8.3 7.1-3.1 2.7-8.7-4.6-11.6-9.4-6.2 3.7-8.5 3.6-14.7-4.6-20.8-5.8 7.6-5 13.9 2.2 21.1-4.7-2.6-11.9.1-7.7 8.8 2.3-5.5 7.1-4.2 8.1.5.7 3.3-1.3 7.1-5.7 7.9-3.5.7-9-1.8-13.5-11.2 2.5.1 4.7 1.3 7.5 3.3l-4.7-15.4c-1.2 4.4-2.7 7.2-4.3 8.7-1.1-3-.9-5.3 0-10.2l-9.5 3.4c5 6.9 9.9 16.7 14 33.5 14.8-2.1 30.8-3.2 47.7-3.2z"
+            ></path>
+            <image src="https://docs.wifi.service.gov.uk/assets/images/govuk-logotype-crown.png" xlink:href="" class="govuk-header__logotype-crown-fallback-image" width="36" height="32"></image>
+          </svg>
+          <span class="govuk-header__logotype-text">
+            GOV.UK
+          </span>
+        </span>
+        <span class="govuk-header__product-name">
+          GovWifi
+        </span>
+      </a>
+        <strong class="govuk-tag">Beta</strong>
+    </div>
+    <div class="govuk-header__content">
+      <button type="button" role="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation govuk-header__navigation--end" aria-label="Top Level Navigation">
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="https://www.wifi.service.gov.uk/about-govwifi/connect-to-govwifi">Connect to GovWifi</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="https://docs.wifi.service.gov.uk/">Offer GovWifi</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="https://www.wifi.service.gov.uk/support">Support</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="https://admin.wifi.service.gov.uk/users/sign_in">Admin</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </a>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents">
+
+                            <div class="search" data-module="search">
+               
+  <div id="search-results" class="search-results" aria-hidden="true" role="dialog" aria-labelledby="search-results-title">
+    <div class="search-results__inner">
+      <button class="search-results__close">Close<span class="search-results__close-label"> search results</span></button>
+      <h2 id="search-results-title" class="search-results__title" aria-live="polite">Results</h2>
+      <div class="search-results__content"></div>
+              
+    </div>
+  </div>
+</div>
+
+              <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading" data-module="collapsible-navigation">
+                      <ul>
+  <li>
+    <a href="https://stephengill.github.io/wifi-prototype/connect.html"><span>Connect to GovWifi</span></a>
+  </li>
+</ul>
+<ul>
+  <li>
+    <a href="/wifi-prototype/help/get-help.html"><span>Get help with GovWifi</span></a>
+    <ul>
+      <li>
+        <a href="/wifi-prototype/help/recover-password.html"><span>Recover your password</span></a>
+      </li>
+      <li>
+        <a href="/wifi-prototype/help/connect-android.html"><span>Connect an Android device</span></a>
+      </li>
+      <li>
+        <a href="/wifi-prototype/help/connect-iphone.html"><span>Connect an iPhone or iPad</span></a>
+      </li>
+      <li>
+        <a href="/wifi-prototype/help/connect-mac.html"><span>Connect a Mac</span></a>
+      </li>
+      <li>
+        <a href="/wifi-prototype/help/connect-windows.html"><span>Connect a Windows device</span></a>
+      </li>
+      <li>
+        <a href="/wifi-prototype/help/connect-chromebook.html"><span>Connect a Chromebook</span></a>
+      </li>
+      <li>
+        <a href="/wifi-prototype/help/connect-blackberry.html"><span>Connect a Blackberry</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled">
+          <main id="content" class="technical-documentation" data-module="anchored-headings">
+            <p><h1 id="offer-govwifi">Connect to GovWifi with a Windows device</h1>
+           
+ <p class="govuk-body">Different versions of Windows work in slightly different ways. If you don't know which version of Windows your device is running, read <a href="https://support.microsoft.com/en-gb/help/13443/windows-which-operating-system" class="govuk-link">Microsoft's guidance</a>.</p>
+
+        <h2 class="govuk-heading-m">Contents</h2>
+
+        <ul class="govuk-list">
+          <li><a href="#connect-windows-8" class="govuk-link">Connect using Windows 8 or 10</a></li>
+          <li><a href="#support-windows-8" class="govuk-link">Support for Windows 8 and 10</a></li>
+          <li><a href="#connect-windows-7" class="govuk-link">Connect using Windows 7</a></li>
+          <li><a href="#support-windows-7" class="govuk-link">Support for Windows 7</a></li>
+        </ul>
+
+        <h3 class="govuk-heading-m" id="connect-windows-8">Connect using Windows 8 or 10</h3>
+
+        <p class="govuk-body">Once you have a GovWifi username and password, follow the steps below.</p>
+        <ol class="govuk-list govuk-list--number">
+          <li>
+            <p class="govuk-body">Select the wifi icon in the system tray at the bottom right of your screen. You'll see all the nearby wifi networks.</p>
+            <img src="https://www.wifi.service.gov.uk/images/troubleshooting/windows-step-1.jpg" class="img-fluid" alt="Screenshot of WiFi panel in Windows 8/10" />
+          </li>
+          <li>
+            <p class="govuk-body">Select <strong>GovWifi.</strong></p>
+          </li>
+          <li>
+            <p class="govuk-body">
+              Select <strong>Connect</strong>.
+            </p>
+            <img src="https://www.wifi.service.gov.uk/images/troubleshooting/windows-step-3.jpg" class="img-fluid" alt="Screenshot of Wifi panel with credentials open on Windows 8/10" />
+            <p class="govuk-inset-text">
+              If it says <strong>"can't connect to network"</strong>, your device may have an incorrect or expired
+              username and password for GovWifi or may be expecting an older certificate. To fix this issue, follow
+              the <a href="#forget" class="govuk-link">instructions to forget the network</a> and then try
+              again.</p>
+          </li>
+          <li>
+            <p class="govuk-body">Enter the username and password you received by email or text.</p>
+<p class="govuk-inset-text">Your password is case sensitive. It's 3 words without spaces. The first letter of each word is capitalised.</p></li>
+
+          </li>
+          <li>
+            <p class="govuk-body">Select <strong>OK.</strong></p>
+            <img src="https://www.wifi.service.gov.uk/images/troubleshooting/windows-step-5.jpg" class="img-fluid" alt="Screenshot of Wifi panel confirmation on Windows 8/10" />
+          </li>
+          <li>
+            <p class="govuk-body">When you see <strong>Continue connecting</strong>, select <strong>Show certificate details.</strong></p>
+          </li>
+          <li>
+            <p class="govuk-body">Check that the <strong>Server thumbprint</strong> matches: </p>
+            <p class="govuk-body"><strong>37 CE B5 7A 3F 38 EB 7C 66 A2 4E 90 BB 11 71 D7 BC 4D 65 1A</strong></p>
+          </li>
+          <li>
+            <p class="govuk-body">If it matches, select <strong>Connect</strong>.</p>
+          </li>
+        </ol>
+        <p class="govuk-body">You should now be connected to GovWifi.</p>
+
+        <h2 class="govuk-heading-m" id="support-windows-8">Support for Windows 8 and 10</h2>
+        <h3 class="govuk-heading-s" id="forget">Forget the network</h3>
+
+        <p class="govuk-body">If your device says it <strong>can't connect to network</strong>, it may be trying to
+          connect with an incorrect or expired username and password for GovWifi or may be expecting an older
+          certificate. You need to tell your device to forget your GovWifi connection.</p>
+
+        <ol class="govuk-list govuk-list--number">
+          <li>
+            <p class="govuk-body">Go to <strong>Settings, WiFi</strong> and select <strong>Manage known networks.</strong></p>
+            <img src="https://www.wifi.service.gov.uk/images/troubleshooting/windows-8-step-1.jpg" class="img-fluid" alt="Screenshot of WiFi Settings on Windows 8/10" />
+          </li>
+
+          <li>
+            <p class="govuk-body">Select <strong>GovWifi.</strong></p>
+            <img src="https://www.wifi.service.gov.uk/images/troubleshooting/windows-8-step-2.jpg" class="img-fluid" alt="Screenshot of known networks panel on Windows 8/10" />
+          </li>
+          <li>
+            <p class="govuk-body">Select <strong>Forget.</strong></p>
+          </li>
+        </ol>
+        <h3 class="govuk-heading-s">Check your website access</h3>
+        <p class="govuk-body">If GovWifi doesn't let you access websites which you'd normally be able to access, follow the <a href="#forget" class="govuk-link">instructions to forget the network</a> and reconnect.</p>
+
+        <h2 class="govuk-heading-m" id="connect-windows-7">Connect using Windows 7</h2>
+
+        <p class="govuk-body">Once you have a GovWifi <a href="/about-govwifi/connect-to-govwifi" class="govuk-link">username and password</a>, follow the steps below.</p>
+
+        <ol class="govuk-list govuk-list--number">
+          <li>
+            <p class="govuk-body">Open the <strong>Control Panel</strong>, and select <strong>Network and Sharing Center</strong>.</p>
+            <img src="https://www.wifi.service.gov.uk/images/troubleshooting/windows-7-step-1.jpg" class="img-fluid" alt="Screenshot of the Control Panel's network settings on Windows 7" />
+          </li>
+          <li>
+            <p class="govuk-body">Select <strong>Set up a new connection or network</strong>.</p>
+            <img src="https://www.wifi.service.gov.uk/images/troubleshooting/windows-7-step-2.jpg" class="img-fluid" alt="Screenshot of Connection Setup Wizard on Windows 7" />
+          </li>
+          <li>
+            <p class="govuk-body">Select <strong>Manually connect to a wireless network</strong>.</p>
+            <img src="https://www.wifi.service.gov.uk/images/troubleshooting/windows-7-step-3.jpg" class="img-fluid" alt="Screenshot of manual WiFi connection panel on Windows 7" />
+          </li>
+          <li>
+            <p class="govuk-body">For the <strong>Network name</strong>, enter <strong>GovWifi</strong> and for the <strong>Security type</strong>, select <strong>WPA2-Enterprise</strong>. The network name is case sensitive so make sure you enter capital G and capital W.</p>
+          </li>
+          <li>
+            <p class="govuk-body">Select <strong>Next.</strong></p>
+            <img src="https://www.wifi.service.gov.uk/images/troubleshooting/windows-7-step-5.jpg" class="img-fluid" alt="Screenshot of successfull WiFi addition on Windows 7" />
+          </li>
+          <li>
+            <p class="govuk-body">Select <strong>Change connection settings.</strong></p>
+            <img src="https://www.wifi.service.gov.uk/images/troubleshooting/windows-7-step-6.jpg" class="img-fluid" alt="Screenshot of network properties dialog on Windows 7" />
+          </li>
+
+          <li>
+            <p class="govuk-body">Select the <strong>Security</strong> tab and select <strong>Settings</strong>.</p>
+          </li>
+          <li>
+            <p class="govuk-body">Tick the <strong>Connect to these servers box</strong>. In the text box below it, enter <strong>wifi.service.gov.uk</strong>.</p>
+          </li>
+          <li>
+            <p class="govuk-body">In the <strong>Trusted Root Certification Authorities</strong> list, select <strong>DigiCert Global Root CA</strong>.</p>
+          </li>
+          <li>
+            <p class="govuk-body">Tick <strong>Enable Identity Privacy</strong> and enter <strong>anonymous</strong> to prevent your device from broadcasting your GovWifi username.</p>
+          </li>
+          <li>
+            <p class="govuk-body">Select <strong>Configure.</strong></p>
+            <img src="https://www.wifi.service.gov.uk/images/troubleshooting/windows-7-step-11.jpg" class="img-fluid" alt="Screenshot of Identity Privacy settings on Windows 7" />
+          </li>
+          <li>
+            <p class="govuk-body">Untick <strong>Automatically use my Windows logon name</strong>.</p>
+          </li>
+          <li>
+            <p class="govuk-body">Select <strong>OK</strong>, then <strong>OK</strong> again to go back to the <strong>GovWifi Wireless Network Properties</strong> window.</p>
+            <img src="https://www.wifi.service.gov.uk/images/troubleshooting/windows-7-step-13.jpg" class="img-fluid" alt="Screenshot of network properties dialog on Windows 7" />
+          </li>
+          <li>
+            <p class="govuk-body">Select <strong>Advanced settings</strong>.</p>
+            <img src="https://www.wifi.service.gov.uk/images/troubleshooting/windows-7-step-14.jpg" class="img-fluid" alt="Screenshot of Advanced Connection Settings panel on Windows 7" />
+          </li>
+          <li>
+            <p class="govuk-body">Select <strong>User authentication</strong> from the dropdown menu under <strong>Specify authentication mode</strong>, then select <strong>Save credentials</strong>.</p>
+            <img src="https://www.wifi.service.gov.uk/images/troubleshooting/windows-7-step-15.jpg" class="img-fluid" alt="Screenshot of Save Credentials dialog on Windows 7" />
+          </li>
+
+          <li>
+            <p class="govuk-body">Enter the username and password you received by email or text.</p>
+<p class="govuk-inset-text">Your password is case sensitive. It's 3 words without spaces. The first letter of each word is capitalised.</p></li>
+
+          </li>
+          <li>
+            <p class="govuk-body">Select <strong>OK</strong> to close all windows.</p>
+          </li>
+          <li>
+            <p class="govuk-body">Select the wifi logo at the bottom right of your screen and select <strong>GovWifi</strong>.</p>
+          </li>
+        </ol>
+        <p class="govuk-body">You should now be connected to GovWifi.</p>
+
+        <h2 class="govuk-heading-m" id="support-windows-7">Support for Windows 7</h2>
+        <p class="govuk-body">If you can't see 'DigiCert Global Root CA' in the Trusted Root Certification Authorities list you might not have the right certificate installed on your device. If you manage your own device, you can download it from the web.</p>
+        <ol class="govuk-list govuk-list--number">
+          <li>
+            <p class="govuk-body">In your web browser, navigate
+              to: <a href="https://www.digicert.com/digicert-root-certificates.htm" class="govuk-link long-link">https://www.digicert.com/digicert-root-certificates.htm</a>
+              and select Download under 'DigiCert Global Root CA'. Save the file to the C: drive</p>
+          </li>
+          <li>
+            <p class="govuk-body">To install the certificate from the Command Prompt, go to your start menu, select 'Accessories' and right click on 'Command Prompt'. Choose 'Run as administrator'.</p>
+          </li>
+          <li>
+            <p class="govuk-body">Copy (Ctrl + v) the text below:<br/>
+              <code>certutil -addstore -enterprise -f "Root" c:\DigiCertGlobalRootCA.crt</code>
+          </li>
+
+          <li>
+            <p class="govuk-body">Right click in the Command Prompt window and select 'Paste'. Press return.</p>
+          </li>
+          <li>
+            <p class="govuk-body">Follow the same steps for 'GeoTrust RSA CA 2018'. You can download it
+              from <a href="https://www.digicert.com/digicert-root-certificates.htm#intermediates">https://www.digicert.com/digicert-root-certificates.htm#intermediates</a></p>
+          </li>
+        </ol>
+        <p class="govuk-body">You should now be able to select the right certificate when you try connecting to GovWifi again.</p>
+        <p class="govuk-body">Ask your local IT team if you need help downloading or installing the certificate.</p>
+    
+          </main>
+
+          <aside>
+          </aside>
+
+          <footer class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="https://www.wifi.service.gov.uk/accessibility-statement">Accessibility</a>
+            </li>
+        </ul>
+
+      <svg
+        role="presentation"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://docs.wifi.service.gov.uk/javascripts/application.js"></script>
+  </body>
+</html>
